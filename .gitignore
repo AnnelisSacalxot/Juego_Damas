@@ -1,0 +1,3 @@
+*.class
+
+//Para no darle seguimiento a los .class en Java
