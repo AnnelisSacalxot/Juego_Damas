@@ -6,7 +6,7 @@ public abstract class Cuadro {
     y los String son los colores que dichos  caracteres van a tomar para poder
     mostrarse en el tablero */
 
-    protected final char CUADRO = (char)182;
+    protected final char CUADRO = (char)197;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_WHITE = "\u001B[37m";
 

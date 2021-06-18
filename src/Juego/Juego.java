@@ -7,7 +7,6 @@ import Tablero.*;
 
 public class Juego {
     Cuadro [][] tablero;
-    Cuadro cuadro = new Cuadro();
 
     //Iniciamos el constructor e indico el tamaño de la matriz 
 
@@ -20,7 +19,7 @@ public class Juego {
     //para llamarlos cuando se cree el objeto
 
     public void iniciarJuegoDamas(){
-
+        pintarTablero();
     }
 
      /* Para inicilizar el tablero y también pintarlo utilizaremos ciclos
@@ -36,9 +35,9 @@ public class Juego {
                 blanco = !blanco;
 
                 if (blanco)
-                    tablero[i][j] = cuadro.getCuadroColorBlanco();
+                    tablero[i][j] =  new CuadroBlanco();
                 else
-                    tablero[i][j] = cuadro.getCuadroColorNegro();
+                    tablero[i][j] = new CuadroNegro();
 
                 //if (i<3 && blanco)
                   //  tablero[i][j].inicializarFichaBlanca();
@@ -48,5 +47,32 @@ public class Juego {
             }
             blanco = !blanco;
         }
+    }
+
+    public void pintarTablero(){
+
+        String linea1 = "";
+        String linea2 = "";
+        String linea3 = "";
+        String linea4 = "";
+
+        for (int i = 0; i<8; i++){
+            for (int j=0;j<8;j++){
+                linea1 = linea1 + tablero[i][j].pintarLinea1();
+                linea2 += tablero[i][j].pintarLinea2();
+                linea3 += tablero[i][j].pintarLinea3();
+                if (j==7)
+                    linea2+="  "+i;
+                if (i==7)
+                    linea4+="   "+j+"  ";
+            }
+            System.out.println(linea1);
+            System.out.println(linea2);
+            System.out.println(linea3);
+            linea1 = "";
+            linea2 = "";
+            linea3 = "";
+        }
+        System.out.println(linea4);
     }
 }
