@@ -39,11 +39,11 @@ public class Juego {
                 else
                     tablero[i][j] = new CuadroNegro();
 
-                //if (i<3 && blanco)
-                  //  tablero[i][j].inicializarFichaBlanca();
+                if (i<3 && blanco)
+                    tablero[i][j].inicializarFichaBlanca();
 
-                //if (i>4 && blanco)
-                  //  tablero[i][j].inicializarFichaNegra();
+                if (i>4 && blanco)
+                    tablero[i][j].inicializarFichaNegra();
             }
             blanco = !blanco;
         }
