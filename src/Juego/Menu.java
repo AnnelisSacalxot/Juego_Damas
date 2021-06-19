@@ -5,12 +5,15 @@ package Juego;
 
 import java.util.Scanner;
 
+import Persona.VectorJugador;
+
 public class Menu {
 
     //Declarando las variables que necesito 
     Scanner leer = new Scanner(System.in);
     private int opcion;
     boolean salir = false;
+    VectorJugador parametroJugador = new VectorJugador();
 
     //Constructor de la clase
     public Menu(){
@@ -30,7 +33,7 @@ public class Menu {
 
         switch (opcion) {
             case 1:
-                
+                nombreJugadores();
                 break;
             case 2:    
                 salir = true;
@@ -40,6 +43,11 @@ public class Menu {
             default:
             System.out.println("Opción no encontrada");
         }
+    }
+
+    private void nombreJugadores() {
+
+        parametroJugador.agregarJugador();
     }
 
 }
