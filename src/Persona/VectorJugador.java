@@ -33,6 +33,7 @@ public class VectorJugador {
                 System.out.println("\n« « « Jugador "+(i+1) +"» » »");
                 String nickname = IngresoDatos.getTexto("Ingrese nickname");
                 agregarJugador(nickname); 
+                jugadores[(contadorJugador-1)] = new Jugador(nickname);
         } 
 
     } else {
@@ -40,12 +41,14 @@ public class VectorJugador {
            System.out.println("El número de jugadores se excede");
        }
     }
+    contadorJugador++;
 }
 
 
     //Mostramos los datos recibidos
 
     public void mostrarJugadores(){
+
         System.out.println("\n\n Jugadores");
         for (int i = 0; i < (contadorJugador-1); i++) {
         System.out.println("-"+i+") "+jugadores[i].getNickname());
