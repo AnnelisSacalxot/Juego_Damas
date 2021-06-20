@@ -34,6 +34,7 @@ public class Menu {
         switch (opcion) {
             case 1:
                 nombreJugadores();
+                mostrarNicknameJugadores();
                 break;
             case 2:    
                 salir = true;
@@ -45,9 +46,14 @@ public class Menu {
         }
     }
 
+    private void mostrarNicknameJugadores() {
+        parametroJugador.mostrarJugadores();
+    }
+
     private void nombreJugadores() {
 
         parametroJugador.agregarJugador();
+       
     }
 
 }

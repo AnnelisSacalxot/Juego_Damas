@@ -1,6 +1,7 @@
 package Persona;
 
 import java.util.Scanner;
+import Persona.Jugador;
 
 public class VectorJugador {
     
@@ -8,6 +9,7 @@ public class VectorJugador {
     private Jugador[] jugadores = new Jugador[10];
     private int contadorJugador;
     Scanner leer = new Scanner(System.in);
+    private String nickname;
 
     //Constructor
     public VectorJugador(){
@@ -43,11 +45,10 @@ public class VectorJugador {
 
     //Mostramos los datos recibidos
 
-    public void mostrarPeliculas(){
-
+    public void mostrarJugadores(){
         System.out.println("\n\n Jugadores");
         for (int i = 0; i < (contadorJugador-1); i++) {
-        System.out.println("-"+i+") "+jugadores[i].getInformacion());
+        System.out.println("-"+i+") "+jugadores[i].getNickname());
         }
 
         System.out.println("\n\n");
