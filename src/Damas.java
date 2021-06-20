@@ -5,7 +5,7 @@ import Juego.Menu;
 
 public class Damas {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
      
         //Creamos nuestro objeto para poder ejecutar nuestro código
         Menu menu = new Menu();

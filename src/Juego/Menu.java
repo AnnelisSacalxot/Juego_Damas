@@ -24,7 +24,7 @@ public class Menu {
 
     public void iniciarMenu(){
 
-        System.out.println("°♦°♦°♦° Bienvenido a Juego de Damas °♦°♦°♦°");
+        System.out.println("\n°♦°♦°♦° Bienvenido a Juego de Damas °♦°♦°♦°");
         System.out.println("1. Ingrese nickname de jugadores");
         System.out.println("2. Salir");
         System.out.println("\nEliga la opción que desee: ");

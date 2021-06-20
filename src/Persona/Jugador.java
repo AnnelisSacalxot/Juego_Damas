@@ -4,12 +4,11 @@ public class Jugador {
 
     //Las variables que se van a utilizar para los métodos a implementar
     private String nickname;
-    private int numeroJugador = 0;
 
     //constructor
-    public Jugador(String nickname, int numeroJugador){
+    public Jugador(String nickname){
         this.nickname = nickname;
-        this.numeroJugador = numeroJugador;
+
     }
 
     public Jugador(){
@@ -26,16 +25,10 @@ public class Jugador {
         this.nickname = nickname;
     }
 
-    public int getNumeroJugador(){
-        return numeroJugador;
-    }
 
-    public void setNumeroJugador(int numeroJugador){
-        this.numeroJugador = numeroJugador;
-    }
 
     public String getInformacion() {
-        String resultado = "No. " + numeroJugador + " Nickname: " + nickname;
+        String resultado = " Nickname: " + nickname;
         return resultado;
     }
 

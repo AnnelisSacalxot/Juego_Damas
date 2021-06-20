@@ -16,7 +16,7 @@ public class VectorJugador {
 
     //Agregamos peliculas
 
-    public void agregarJugador(String nickname, int numeroJugador){
+    public void agregarJugador(String nickname){
        
     }
 
@@ -26,11 +26,17 @@ public class VectorJugador {
         contadorJugador= leer.nextInt();
         leer.nextLine();
 
-        for (int i = 0; i < contadorJugador; i++) {
-        System.out.println("\n« « « Jugador "+(i+1) +"» » »");
-        String nickname = IngresoDatos.getTexto("Ingrese nickname");
-        int numeroJugador = IngresoDatos.getEntero("Ingrese el número de jugador", false);
-        agregarJugador(nickname, numeroJugador);
+        if (contadorJugador <= 10) {
+            for (int i = 0; i < contadorJugador; i++) {
+                System.out.println("\n« « « Jugador "+(i+1) +"» » »");
+                String nickname = IngresoDatos.getTexto("Ingrese nickname");
+                agregarJugador(nickname); 
+        } 
+
+    } else {
+       if (contadorJugador > 10) {
+           System.out.println("El número de jugadores se excede");
+       }
     }
 }
 
