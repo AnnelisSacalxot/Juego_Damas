@@ -62,7 +62,9 @@ public abstract class Cuadro {
     //para las clases que heredan
     abstract String getCuadroColor();
 
-    public boolean isEmpty() {
+    public boolean isEmpty(){
+        if (dama == null)
+            return true;
         return false;
     }
 }

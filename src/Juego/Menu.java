@@ -79,7 +79,7 @@ public class Menu {
         System.out.println("Jugador 1: Fichas amarillas");
         System.out.println("Jugador 2: Fichas azules");
         System.out.println("\n");
-        jugable.pintarTablero();
+        jugable.iniciarJuegoDamas();
     }
 
     private void mostrarNicknameJugadores() {

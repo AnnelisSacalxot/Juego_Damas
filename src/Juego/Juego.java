@@ -22,6 +22,8 @@ public class Juego {
 
     public void iniciarJuegoDamas(){
         pintarTablero();
+        moverFicha();
+        pintarTablero();
     }
 
 
