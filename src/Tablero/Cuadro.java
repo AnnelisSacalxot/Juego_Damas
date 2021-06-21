@@ -61,4 +61,8 @@ public abstract class Cuadro {
     //Utilizamos el metodo abstact porque en este caso necesitamos este metodo 
     //para las clases que heredan
     abstract String getCuadroColor();
+
+    public boolean isEmpty() {
+        return false;
+    }
 }

@@ -3,6 +3,8 @@
      aqui ira la lógica principal */
 
 package Juego;
+import java.util.Scanner;
+
 import Tablero.*;
 
 public class Juego {
@@ -22,6 +24,53 @@ public class Juego {
         pintarTablero();
     }
 
+
+    //Lógica para las damas y movimiento 
+
+
+    public void moverFicha(){
+        int x,y,d;
+        Scanner n = new Scanner(System.in);
+        System.out.println("Posición y:");
+        x= n.nextInt();
+        System.out.println("Posición x:");
+        y=n.nextInt();
+        System.out.println("0 izquierda, 1 derecha:");
+        d = n.nextInt();
+
+        if (movimientoValido(x,y,1)&& movimientoValido(x,y,0)){
+            if (movimientoValido(tablero[x][y],tablero[(x+1)][(y+1)]))
+                moverDama(tablero[x][y],tablero[(x+1)][(y+1)]);
+            else
+                System.out.println("Movimiento invalido");
+        }
+        else
+            System.out.println("Movimiento fuera de rango");
+
+
+    }
+
+    public void moverDama(Cuadro co, Cuadro cd){
+        cd.setDama(co.getDama());
+        co.setDama(null);
+
+    }
+
+    public boolean movimientoValido(Cuadro co, Cuadro cd){
+        if (cd.isEmpty() && !co.isEmpty())
+            return true;
+        return false;
+    }
+
+
+    public boolean movimientoValido(int x, int y, int m){
+        x+=m;
+        y+=m;
+        if ((x>=0) && (x<= 7) && (y>=0 ) && (y<=7))
+            return true;
+        return false;
+    }
+    
      /* Para inicilizar el tablero y también pintarlo utilizaremos ciclos
     "for" anidados ya que son matrices con los que estamos trabajando*/
    

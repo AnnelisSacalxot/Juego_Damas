@@ -1,3 +1,7 @@
+/*Se trabajara la lógica de Piedra, Papel o Tijera se harán Strings 
+porque no necesitamos que los usuarios introduzcan los valores
+o cadenas sino que será de manera aleatoria */
+
 package Ppt;
 
 public class PiedraPapelTijera {
