@@ -9,7 +9,7 @@ public class VectorJugador {
     private Jugador[] jugadores = new Jugador[10];
     private int contadorJugador;
     Scanner leer = new Scanner(System.in);
-    private String nickname;
+   // private String nickname;
 
     //Constructor
     public VectorJugador(){
@@ -48,7 +48,6 @@ public class VectorJugador {
     //Mostramos los datos recibidos
 
     public void mostrarJugadores(){
-
         System.out.println("\n\n Jugadores");
         for (int i = 0; i < (contadorJugador-1); i++) {
         System.out.println("-"+i+") "+jugadores[i].getNickname());
@@ -57,5 +56,21 @@ public class VectorJugador {
         System.out.println("\n\n");
     }
 
+    //Ordenar alfabetico de los nickname cuandos se muestran
+
+    public void mostrarNicknameOrdenado(boolean ascendente){
+        boolean cambio = true;
+
+        for (int i = 1; i < (contadorJugador-1); i++) {
+            for (int j = 0; j < (contadorJugador-1-i); j++) {
+                //  String.compareTo(String)
+                //   [-oo , + oo]
+                if (ascendente)
+                    cambio= (jugadores[j].getNickname().compareTo(jugadores[j+1].getNickname()) > 0 );
+                else 
+                    cambio= (jugadores[j].getNickname().compareTo(jugadores[j+1].getNickname()) < 0 );
+            }
+        }
+    }
 
 }
