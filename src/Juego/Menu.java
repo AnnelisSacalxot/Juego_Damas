@@ -49,13 +49,17 @@ public class Menu {
     private void menuJugar() {
 
         System.out.println("/°/°/ DAMAS /°/°/");
-        System.out.println("1. Elegir quienes van a jugar ( ejempleo: 1 y 2)");
+        System.out.println("1. Elegir jugadores (ejemplo: 1 y 2)");
         System.out.println("2. Mostrar rendimiento de jugadores");
         opcion = leer.nextInt();
         leer.nextLine();
 
         switch (opcion) {
             case 1:
+                System.out.println("Jugadores: ");
+                opcion = leer.nextInt();
+                leer.nextLine();
+                System.out.println("\n Para elegir quien va primero vamos con ¡Piedra, papel o tijera!");
                 playJuego();
                 break;
             case 2:
@@ -76,6 +80,7 @@ public class Menu {
     }
 
     private void playJuego() {
+
 
     }
 
