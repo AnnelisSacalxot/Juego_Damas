@@ -1,10 +1,12 @@
 /*Esta clase va a manejar el menpu y desde aca se va a manejar las
-opciones para poder ejecutar o no el juego */
+opciones para poder ejecutar o no el juego, también se estarán 
+importando las clases necesarias para la ejecución de este */
 
 package Juego;
 
 import java.util.Scanner; 
 import Persona.VectorJugador;
+import Ppt.PiedraPapelTijera;
 
 public class Menu {
 
@@ -13,6 +15,7 @@ public class Menu {
     private int opcion;
     boolean salir = false;
     VectorJugador parametroJugador = new VectorJugador();
+    PiedraPapelTijera ppt = new PiedraPapelTijera();
 
     //Constructor de la clase
     public Menu(){
@@ -80,7 +83,7 @@ public class Menu {
     }
 
     private void playJuego() {
-
+        ppt.juegoIniciaP();
 
     }
 
