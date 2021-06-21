@@ -16,6 +16,7 @@ public class Menu {
     boolean salir = false;
     VectorJugador parametroJugador = new VectorJugador();
     PiedraPapelTijera ppt = new PiedraPapelTijera();
+    Juego jugable = new Juego();
 
     //Constructor de la clase
     public Menu(){
@@ -64,6 +65,7 @@ public class Menu {
                 leer.nextLine();
                 System.out.println("\n Para elegir quien va primero vamos con ¡Piedra, papel o tijera!");
                 playJuego();
+                mostrarTablero();
                 break;
             case 2:
                 rendimientoJugadores();
@@ -73,6 +75,13 @@ public class Menu {
         }
     }
 
+    private void mostrarTablero() {
+        System.out.println("Jugador 1: Fichas amarillas");
+        System.out.println("Jugador 2: Fichas azules");
+        System.out.println("\n");
+        jugable.pintarTablero();
+    }
+
     private void mostrarNicknameJugadores() {
 
         parametroJugador.mostrarJugadores();
@@ -80,11 +89,12 @@ public class Menu {
     }
 
     private void rendimientoJugadores() {
+        parametroJugador.mostrarNicknameOrdenado(true);
     }
 
     private void playJuego() {
         ppt.juegoIniciaP();
-
+        System.out.println("\n");
     }
 
     private void nombreJugadores() {
