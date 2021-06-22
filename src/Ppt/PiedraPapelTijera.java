@@ -8,9 +8,9 @@ public class PiedraPapelTijera {
     
     //Declaro las variables que van a servir para el juego y también
     // se va a utilizar el metodo random para tirar las jugadas
-    int jugador1, jugador2, aleatorio=0;
-    String gano1 = "Gano jugador 1";
-    String gano2 = "Gano jugador 2";
+   private int jugador1, jugador2, aleatorio=0;
+   private String gano1 = "Gano jugador 1";
+   private String gano2 = "Gano jugador 2";
 
     //Constructor
 

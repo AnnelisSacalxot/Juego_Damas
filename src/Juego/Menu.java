@@ -13,7 +13,7 @@ public class Menu {
     //Declarando las variables que necesito 
     Scanner leer = new Scanner(System.in);
     private int opcion;
-    boolean salir = false;
+    private boolean salir = false;
     VectorJugador parametroJugador = new VectorJugador();
     PiedraPapelTijera ppt = new PiedraPapelTijera();
     Juego jugable = new Juego();
